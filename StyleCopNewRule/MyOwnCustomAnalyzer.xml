@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SourceAnalyzer Name="My Own Custom Rule">
+  <Description> Custom rules added to analyzer. </Description>
+  <Rules>
+    <RuleGroup Name="Entities Rules">
+      <Rule Name="ClassUnderEntitiesNamespaceMustBePublic" CheckId="HE2223">
+        <Context>All classes under namespace endwith ".Entities" must be public.</Context>
+        <Description>All classes under namespace endwith ".Entities" must be public.</Description>
+      </Rule>
+      <Rule Name="ClassUnderEntitiesNamespaceMustHavePublicId" CheckId="HE2224">
+        <Context>All classes under namespace endwith ".Entities" must have public property "Id".</Context>
+        <Description>All classes under namespace endwith ".Entities" must have public property "Id".</Description>
+      </Rule>
+      <Rule Name="ClassUnderEntitiesNamespaceMustHaveAttribute" CheckId="HE2225">
+        <Context>All classes under namespace must have Attribute [DataContract].</Context>
+        <Description>All classes under namespace must have Attribute [DataContract].</Description>
+      </Rule>
+      <Rule Name="ClassUnderEntitiesNamespaceMustHavePublicName" CheckId="HE2226">
+        <Context>All classes under namespace endwith ".Entities" must have public property "Name".</Context>
+        <Description>All classes under namespace endwith ".Entities" must have public property "Name".</Description>
+      </Rule>
+    </RuleGroup>
+    <RuleGroup Name="Controllers Rules">
+      <Rule Name="SystemWebMvcControllerMustHaveSuffixController" CheckId="HE2227">
+        <Context>Class inherited from System.Web.Mvc.Controller must have suffix controller.</Context>
+        <Description>Class inherited from System.Web.Mvc.Controller must have suffix controller.</Description>
+      </Rule>    
+      <Rule Name="SystemWebMvcControllerMustHaveAttribute" CheckId="HE2228">
+        <Context>Class inherited from System.Web.Mvc.Controller must have attribute "Authorize" or all its public method.</Context>
+        <Description>Class inherited from System.Web.Mvc.Controller must have attribute "Authorize" or all its public method.</Description>
+      </Rule>    
+    </RuleGroup>
+  </Rules>
+</SourceAnalyzer>
