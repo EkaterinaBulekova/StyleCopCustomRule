@@ -58,11 +58,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ControllerWrongNameAttribute.cs" />
+    <Compile Include="Controllers\WrongAttributeMetodController.cs" />
     <Compile Include="Controllers\WithoutAttributeMetodController.cs" />
     <Compile Include="Controllers\WrongAttributeController.cs" />
     <Compile Include="Controllers\WithoutAttributeController.cs" />
-    <Compile Include="Entities\TestEntity1.cs" />
-    <Compile Include="Entities\TestEntity2.cs" />
+    <Compile Include="Entities\NonPublicEntity.cs" />
+    <Compile Include="Entities\EntityNonPublicId.cs" />
+    <Compile Include="Entities\EntityWrongAttribute.cs" />
+    <Compile Include="Entities\RightEntity.cs" />
+    <Compile Include="Entities\EntityWithoutId.cs" />
+    <Compile Include="Entities\EntityWithoutAttribute.cs" />
+    <Compile Include="Entities\EntityWithoutName.cs" />
+    <Compile Include="Entities\EntityNonPublicName.cs" />
     <Compile Include="Controllers\RightController.cs" />
     <Compile Include="Controllers\ControllerWrongName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

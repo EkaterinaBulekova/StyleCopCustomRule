@@ -1,11 +1,10 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using StyleCop;
+using StyleCop.CSharp;
 
 namespace StyleCopNewRule
 {
-    using StyleCop;
-    using StyleCop.CSharp;
-    using System;
-
     [SourceAnalyzer(typeof(CsParser))]
     public class MyOwnCustomAnalyzer : SourceAnalyzer
     {
@@ -14,7 +13,7 @@ namespace StyleCopNewRule
             var codeDocument = (CsDocument)currentCodeDocument;
             if (codeDocument.RootElement != null && !codeDocument.RootElement.Generated)
             {
-                codeDocument.WalkDocument(new CodeWalkerElementVisitor<object>(this.InspectCurrentElement), null, null);
+                codeDocument.WalkDocument(InspectCurrentElement, null, null);
             }
         }
 
@@ -69,8 +68,6 @@ namespace StyleCopNewRule
 
                         if (hasNonAutorizePublicMethods)
                             AddViolation(element, "SystemWebMvcControllerMustHaveAttribute", "SystemWebMvcControllerMustHaveAttribute");
-
-
                     }
                 }
             }

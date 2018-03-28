@@ -3,8 +3,10 @@
 namespace StyleCopNewRule.Tests.Entities
 {
     [DataContract]
-    public class TestEntity1
+    public class RightEntity
     {
-        public string Prop { get; set; }
+        public string Id { get; }
+
+        public string Name { get; set; }
     }
 }
